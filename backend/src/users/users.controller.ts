@@ -13,8 +13,4 @@ export class UsersController {
   login(@Body() createUserDto: CreateUserDto): Promise<any> {
     return this.usersService.login(createUserDto);
   }
-  @Get()
-  getAll(): Promise<any> {
-    return this.usersService.getAll();
-  }
 }
