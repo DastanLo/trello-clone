@@ -1,0 +1,146 @@
+.form{
+    display: grid;
+    grid-template-columns: 5.5fr 2fr;
+    column-gap: 5px;
+}
+::placeholder{
+    color: white;
+    opacity: 0.6;
+    font-weight: 700;
+}
+.createDeskButton{
+    outline: none;
+    cursor: pointer;
+    font-weight: 700;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+    margin-top: 5px;
+    background: #5aac44;
+    width: 120px;
+    height: 33px;
+    justify-content: center;
+}
+.createDeskButton:hover{
+    background: #5acc44;
+}
+.input > input{
+    font-weight: 700;
+    color: white;
+    line-height: 20px;
+    width: 90%;
+    background: none;
+    border: none;
+    margin: 10px 8px 0;
+    transition-duration: 0.2s;
+}
+.input{
+    background: #BCE784;
+    margin-bottom: 0;
+    border-radius: 2px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.closeButton{
+    margin: 5px 7px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}
+.colors {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5px;
+}
+input:focus{
+    outline: none;
+    background: rgba(0, 0, 0, 0.08);
+}
+.colors > label{
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    border-radius: 2px;
+    position: relative;
+}
+.colors > input{
+    display: none;
+    outline: none;
+}
+#red{
+    background: #BCE784;
+}
+#yellow{
+    background: #5DD39E;
+}
+#blue{
+    background: #348AA7;
+}
+#green{
+    background: #525174;
+}
+#caput_mortuum{
+    background: #513B56;
+}
+#wheat{
+    background: #BA7BA1;
+}
+#orange_soda{
+    background: #C28CAE;
+}
+#skobeloff{
+    background: #D0ABA0;
+}
+#viridian_green{
+    background: #E0C1B3;
+}
+.overlay{
+    border-radius: 2px;
+}
+input[type="radio"]:checked + label:after,
+input[type="radio"]:not(:checked) + label:after {
+    content: "";
+    position: absolute;
+    left: 25%;
+    top: 27%;
+    width: 10px;
+    height: 5px;
+    border-radius: 1px;
+    border-left: 4px solid #000;
+    border-bottom: 4px solid #000;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+input[type="radio"]:not(:checked) + label:after{
+    z-index: -1;
+}
+
+input[type="radio"]:checked + label:after{
+    z-index: 1;
+}
+input[type="radio"]:checked + label:before{
+    transition: 5s;
+    border-radius: 2px;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+    z-index: 2;
+}
+label:hover, label:active, input:hover+label, input:active+label {
+    background:yellow;
+}
+.input input:hover{
+    border-radius: 2px;
+    transition: 0.2s;
+    background: rgba(0, 0, 0, 0.08);
+}
