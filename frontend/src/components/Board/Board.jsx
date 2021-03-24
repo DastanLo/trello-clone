@@ -11,7 +11,6 @@ const Board = ({name, click}) => {
                 <div className="remove-btn">{click}</div>
             </div>
         </div>
-        <CreateBoard/>
     </div>
     );
 };

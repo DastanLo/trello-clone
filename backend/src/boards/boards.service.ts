@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { Board, BoardDocument } from '../models/board.schema';
@@ -10,15 +10,20 @@ export class BoardsService {
     @InjectModel(Board.name) private boardModel: Model<BoardDocument>,
   ) {}
 
-  create(createBoardDto: CreateBoardDto) {
-    return null;
+  async create(createBoardDto: CreateBoardDto): Promise<Board> {
+    try {
+      const board = new this.boardModel(createBoardDto);
+      return board.save();
+    } catch (e) {
+      throw new HttpException('something went wrong', HttpStatus.BAD_REQUEST);
+    }
   }
 
-  getAll() {
-    return null;
+  async getAll(id): Promise<Array<BoardDocument>> {
+    return this.boardModel.find({ user: id });
   }
 
-  remove(id: string) {
-    return null;
+  async remove(id): Promise<any> {
+    await this.boardModel.findByIdAndDelete(id);
   }
 }

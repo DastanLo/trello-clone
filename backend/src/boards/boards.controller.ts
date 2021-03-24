@@ -14,8 +14,7 @@ export class BoardsController {
 
   @Get()
   getAll(@Query('id') id: string): Promise<any> {
-    console.log(id);
-    return this.boardsService.getAll();
+    return this.boardsService.getAll(id);
   }
 
   @Delete(':id')
