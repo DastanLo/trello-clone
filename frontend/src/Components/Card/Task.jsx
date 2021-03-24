@@ -5,7 +5,7 @@ const Task = ({text}) => {
 	return (
 		<li>
 			{text}
-			<img src="/frontend/public/trashBin.png" alt=""/>
+			<img src="/trashBin.png" alt="trash"/>
 		</li>
 	);
 };
