@@ -4,7 +4,6 @@ import './AuthForm.css';
 const AuthForm = () => {
     return (
         <div className="form">
-
             <div className="form__logo">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Trello-logo-blue.svg/885px-Trello-logo-blue.svg.png" alt="" />
             </div>

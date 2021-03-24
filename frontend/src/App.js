@@ -1,12 +1,13 @@
 import React from 'react';
-import Board from './components/Board/Board';
+import AuthForm from './components/AuthForm/AuthForm';
 
 const App = () => {
   return (
-    <div style={{}}>
-      <Board/>
+    <div>
+      <AuthForm/>
     </div>
   );
 };
 
 export default App;
+
