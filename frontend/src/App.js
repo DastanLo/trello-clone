@@ -1,12 +1,12 @@
 import React from 'react';
-
+import AuthForm from './components/AuthForm/AuthForm';
+ 
 const App = () => {
   return (
     <div>
-      App
+    <AuthForm/>
     </div>
   );
 };
 
 export default App;
-
