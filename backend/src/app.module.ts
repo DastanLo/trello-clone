@@ -1,19 +1,26 @@
 import { Module } from '@nestjs/common';
-import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UsersController } from './users/users.controller';
-import { UsersService } from './users/users.service';
-import { AuthModule } from './auth/auth.module';
+import { MongooseModule } from '@nestjs/mongoose';
+import { UsersModule } from './users/users.module';
+import { BoardsModule } from './boards/boards.module';
+import { CardsModule } from './cards/cards.module';
 
 @Module({
   imports: [
     MongooseModule.forRoot(
-      'mongodb+srv://dastan:trello1234@cluster0.thipr.mongodb.net/boards?retryWrites=true&w=majority',
+      'mongodb+srv://dastan:trello1234@cluster0.thipr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+      {
+        useCreateIndex: true,
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      },
     ),
-    AuthModule,
+    UsersModule,
+    BoardsModule,
+    CardsModule,
   ],
-  controllers: [AppController, UsersController],
-  providers: [AppService, UsersService],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}
