@@ -7,7 +7,7 @@ export type CardDocument = Card & Document;
 
 @Schema()
 export class Card {
-  @Prop({ required: true })
+  @Prop({ default: [] })
   tasks: string[];
 
   @Prop({ required: true })

@@ -23,7 +23,7 @@ export class BoardsService {
     return this.boardModel.find({ user: id });
   }
 
-  async remove(id): Promise<any> {
-    await this.boardModel.findByIdAndDelete(id);
+  async remove(id): Promise<Board> {
+    return this.boardModel.findByIdAndDelete(id);
   }
 }
