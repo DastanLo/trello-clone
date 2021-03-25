@@ -1,0 +1,26 @@
+.Modal {
+    display: flex;
+    flex-direction: column;
+    max-height: 60vh;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 500;
+    border-radius: 3px;
+    padding: 16px;
+    left: 60%;
+    top: 10%;
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+}
+
+@media (min-width: 400px) {
+    .Modal {
+        left: calc(50% - 180px);
+    }
+}
+@media screen and (max-width: 400px){
+    .Modal {
+        width: 300px;
+        left: calc(50% - 150px);
+    }
+}
