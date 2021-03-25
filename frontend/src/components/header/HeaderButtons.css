@@ -1,0 +1,53 @@
+.header__buttons{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 3px;
+}
+.header__buttons button{
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 3px;
+    margin-right: 4px;
+    height: 30px;
+    line-height: 10px;
+}
+
+.signUp__btn button{
+    background-color: #5db248;
+    border: solid #5db248;
+}
+.login__btn button{
+    background-color: #4893bf;
+    border: solid #4893bf;
+}
+.logout__btn button{
+    background-color: rgb(202, 43, 43);
+    border: solid rgb(202, 43, 43);
+}
+.signUp__btn button:hover{
+    background-color: #5ca14b;
+    border-color: #5ca14b;
+}
+.login__btn button:hover{
+    background-color: #4287af;
+    border-color: #4287af;
+}
+.logout__btn button:hover{
+    background-color: rgb(180, 38, 38);
+    border-color: rgb(180, 38, 38);
+}
+.signUp__btn button:focus{
+    outline: none;
+}
+.login__btn button:focus{
+    outline: none;
+}
+.logout__btn button:focus{
+    outline: none;
+}
