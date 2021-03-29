@@ -1,10 +1,10 @@
 import React from 'react';
-import BoardsPage from "./container/BoardsPage";
+import Board from './components/Board/Board';
 
 const App = () => {
   return (
-    <div>
-        App
+    <div style={{}}>
+      <Board/>
     </div>
   );
 };
