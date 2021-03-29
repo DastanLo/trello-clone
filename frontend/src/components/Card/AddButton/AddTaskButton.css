@@ -1,0 +1,17 @@
+.addTask{
+    height: 20px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #5e6c84;
+    margin: 9px;
+    padding: 4px;
+}
+.addText:before{
+    content: "+";
+    margin-right: 5px;
+}
+.addTask:hover{
+    border-radius: 2px;
+    background: lightgray;
+    color: black;
+}
