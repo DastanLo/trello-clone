@@ -1,0 +1,34 @@
+.task{
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px 5px 5px;
+    background: #fff;
+    line-height: 20px;
+    margin:10px 10px 0;
+    border-radius: 3px;
+    box-shadow: 0 1px 0.1px darkgray;
+    max-lines: inherit;
+}
+
+.trashBin{
+    border-radius: 2px;
+    padding: 2px;
+    position: absolute;
+    right: 2px;
+    z-index: -1;
+    width: 15px;
+    height: 15px;
+    background-color: #ebecf0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.task:hover .trashBin{
+    z-index: 3;
+}
+.taskText{
+    padding-right: 10px;
+}

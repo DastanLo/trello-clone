@@ -1,7 +1,7 @@
 import React from 'react';
-import Modal from "./Components/UI/Modal/Modal";
-import BoardForm from "./Components/BoardForm/BoardForm";
-import Card from "./Components/Card/Card";
+import Modal from "./components/UI/Modal/Modal";
+import BoardForm from "./components/BoardForm/BoardForm";
+import Card from "./components/Card/CardComponent/Card";
 
 const App = () => {
 

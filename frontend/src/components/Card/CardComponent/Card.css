@@ -1,0 +1,22 @@
+.card{
+    margin: 20px;
+    border-radius: 5px;
+    width: 20%;
+    background: #ebecf0;
+    border: 1px solid #ebecf0;
+    box-shadow: 2px 2px #004;
+}
+h1{
+    margin: 0 0 0 20px;
+    font-size: 17px;
+}
+.title{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.deleteCard{
+    cursor: pointer;
+    margin-right: 10px;
+}
