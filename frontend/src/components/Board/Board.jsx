@@ -1,17 +1,14 @@
 import React from 'react';
 import './Board.css';
-import CreateBoard from "../CreateBoard/CreateBoard";
 
-const Board = ({name, click}) => {
+const Board = ({name, click, bgColor}) => {
     return (
-    <div className="container">
-        <div className="board-body">
+        <div className="board-body" style={{backgroundColor: bgColor}}>
             <div className="top-part">
-                <h6 className="board-name">{name}</h6>
-                <div className="remove-btn">{click}</div>
+                <h6 className="board-name">{name}qweqweqwe</h6>
+                <div className="remove-btn" onClick={click}></div>
             </div>
         </div>
-    </div>
     );
 };
 

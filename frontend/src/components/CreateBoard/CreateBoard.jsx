@@ -4,7 +4,7 @@ import './CreateBoard.css';
 const CreateBoard = ({text, click}) => {
     return (
         <div>
-            <div className="create-body">{click}
+            <div className="create-body" onClick={click}>
                 <span className="create-button">{text}Create new board</span>
             </div>
         </div>
