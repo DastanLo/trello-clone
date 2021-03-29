@@ -10,13 +10,25 @@ import {
 } from '@nestjs/common';
 import { CardsService } from './cards.service';
 import { CreateCardDto } from '../dto/create-card.dto';
+import { UpdateCardDto } from '../dto/update-card.dto';
 
 @Controller('cards')
 export class CardsController {
   constructor(private readonly cardsService: CardsService) {}
+
   @Post()
   create(@Body() createCardDto: CreateCardDto): Promise<any> {
     return this.cardsService.create(createCardDto);
+  }
+
+  @Post('task')
+  createTask(@Body() task: UpdateCardDto): Promise<any> {
+    return this.cardsService.createTask(task);
+  }
+
+  @Post('task/remove')
+  removeTask(@Body() task: UpdateCardDto): Promise<any> {
+    return this.cardsService.removeTask(task);
   }
 
   @Get()

@@ -1,5 +1,6 @@
 import ac from './actionTypes';
 
+
 export const registerUserStart = () => ({type: ac.REGISTER_USER_START});
 export const registerUserSuccess = user => ({type: ac.REGISTER_USER_SUCCESS});
 export const registerUserError = (e) => ({type: ac.REGISTER_USER_ERROR});
