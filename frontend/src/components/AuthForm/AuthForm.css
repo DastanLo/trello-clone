@@ -4,6 +4,9 @@
 .form {
     color: rgb(18, 4, 56);
     text-align: center;
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
 }
 .form__logo img{
     max-width: 196px;
@@ -36,6 +39,13 @@
 
 .email__field:focus {
     outline-color: rgb(130, 185, 236);
+}
+
+.password__field::placeholder {
+    color: #000;
+}
+.email__field::placeholder {
+    color: #000;
 }
 
 .password__field{
