@@ -28,6 +28,7 @@
     "bcrypt": "^5.0.1",
     "mongoose": "^5.12.2",
     "nanoid": "^3.1.22",
+    "redux-devtools-extension": "^2.13.9",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^6.6.6"

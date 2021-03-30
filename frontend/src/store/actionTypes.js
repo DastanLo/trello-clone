@@ -56,6 +56,8 @@ const ac = {
     CREATE_TASK_SYNC: 'CREATE_TASK_SYNC',
     REMOVE_TASK_SYNC: 'REMOVE_TASK_SYNC',
 
+    RESET_ERROR: 'RESET_ERROR',
+
 }
 
 export default ac;

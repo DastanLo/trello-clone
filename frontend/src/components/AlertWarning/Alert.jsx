@@ -1,10 +1,10 @@
 import React from 'react';
 import './Alert.css';
 
-const Alert = () => {
+const Alert = ({text}) => {
     return (
         <div className="alert__box">
-            Отсутствует адрес электронной почты
+          {text}
         </div>
     );
 };

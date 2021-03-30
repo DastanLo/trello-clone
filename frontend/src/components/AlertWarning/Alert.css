@@ -1,9 +1,9 @@
-.alert__box{
-padding: 5px 0 0 10px ;
-border: 1px solid #EB5A46;
-border-radius: 5px;
-max-width: 100%;
-height: 40px;
-color: #fff;
-background-color: #EB5A46;
+.alert__box {
+    padding: 10px 0;
+    border: 1px solid #EB5A46;
+    border-radius: 5px;
+    max-width: 100%;
+    color: #fff;
+    background-color: #EB5A46;
+    margin-bottom: 20px;
 }

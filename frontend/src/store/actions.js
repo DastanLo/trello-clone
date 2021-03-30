@@ -2,14 +2,16 @@ import ac from './actionTypes';
 
 
 export const registerUserStart = () => ({type: ac.REGISTER_USER_START});
-export const registerUserSuccess = user => ({type: ac.REGISTER_USER_SUCCESS});
-export const registerUserError = (e) => ({type: ac.REGISTER_USER_ERROR});
+export const registerUserSuccess = user => ({type: ac.REGISTER_USER_SUCCESS, payload: user});
+export const registerUserError = (e) => ({type: ac.REGISTER_USER_ERROR, payload: e});
 
 export const loginUserStart = () => ({type: ac.LOGIN_USER_START});
-export const loginUserSuccess = user => ({type: ac.LOGIN_USER_SUCCESS});
-export const loginUserError = (e) => ({type: ac.LOGIN_USER_ERROR});
+export const loginUserSuccess = user => ({type: ac.LOGIN_USER_SUCCESS, payload: user});
+export const loginUserError = (e) => ({type: ac.LOGIN_USER_ERROR, payload: e});
 
 export const logout = () => ({type: ac.LOG_OUT});
+
+export const resetError = () => ({type: ac.RESET_ERROR});
 
 //------------------------------------------------------------------------//
 

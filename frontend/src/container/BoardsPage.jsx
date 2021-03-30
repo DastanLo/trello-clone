@@ -6,26 +6,6 @@ const BoardsPage = () => {
     return (
         <div className="boards-container">
             <Board/>
-            <Board/>
-            <Board/>
-            <Board/>
-            <Board/>
-            <Board/>
-            <Board/>
-            <Board/>
-            <Board/>
-            <Board/>
-            <Board/>
-            <Board/>
-            <Board/>
-            <Board/>
-            <Board/>
-            <Board/>
-            <Board/>
-            <Board/>
-            <Board/>
-            <Board/>
-            <Board/>
             <CreateBoard/>
         </div>
     );
