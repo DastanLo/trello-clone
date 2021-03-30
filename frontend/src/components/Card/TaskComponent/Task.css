@@ -1,4 +1,5 @@
-.task{
+.task {
+    cursor: pointer;
     position: relative;
     overflow: hidden;
     align-items: center;
@@ -7,13 +8,15 @@
     padding: 5px 10px 5px 5px;
     background: #fff;
     line-height: 20px;
-    margin:10px 10px 0;
+    margin: 10px 10px 0;
     border-radius: 3px;
     box-shadow: 0 1px 0.1px darkgray;
     max-lines: inherit;
 }
 
-.trashBin{
+.trashBin {
+    opacity: 0.5;
+    cursor: pointer;
     border-radius: 2px;
     padding: 2px;
     position: absolute;
@@ -26,9 +29,14 @@
     background-position: center;
     background-size: contain;
 }
-.task:hover .trashBin{
+
+.task:hover .trashBin {
     z-index: 3;
 }
-.taskText{
+
+.taskText {
     padding-right: 10px;
+}
+.trashBin:hover{
+    opacity: 1;
 }

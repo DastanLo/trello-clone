@@ -27,23 +27,23 @@ const BoardForm = () => {
 				<div className="closeButton">✕</div>
 			</div>
 			<form className="colors">
-				<input type="radio" id="red" name="color" value="#BCE784" onChange={changeStyle}/>
+				<input type="radio" id="red" name="color" value="#519839" onChange={changeStyle}/>
 				<label id="red" htmlFor="red"/>
-				<input type="radio" id="yellow" name="color" value="#5DD39E" onChange={changeStyle}/>
+				<input type="radio" id="yellow" name="color" value="#0079BF" onChange={changeStyle}/>
 				<label id="yellow" htmlFor="yellow"/>
-				<input type="radio" id="blue" name="color" value="#348AA7" onChange={changeStyle}/>
+				<input type="radio" id="blue" name="color" value="#B04632" onChange={changeStyle}/>
 				<label id="blue" htmlFor="blue"/>
-				<input type="radio" id="green" name="color" value="#525174" onChange={changeStyle}/>
+				<input type="radio" id="green" name="color" value="#D29034" onChange={changeStyle}/>
 				<label id="green" htmlFor="green"/>
-				<input type="radio" id="caput mortuum" name="color" value="#513B56" onChange={changeStyle}/>
+				<input type="radio" id="caput mortuum" name="color" value="#F4D06F" onChange={changeStyle}/>
 				<label id="caput_mortuum" htmlFor="caput mortuum"/>
-				<input type="radio" id="wheat" name="color" value="#BA7BA1" onChange={changeStyle}/>
+				<input type="radio" id="wheat" name="color" value="#FFF8F0" onChange={changeStyle}/>
 				<label id="wheat" htmlFor="wheat"/>
-				<input type="radio" id="orange soda" name="color" value="#C28CAE" onChange={changeStyle}/>
+				<input type="radio" id="orange soda" name="color" value="#9DD9D2" onChange={changeStyle}/>
 				<label id="orange_soda" htmlFor="orange soda"/>
-				<input type="radio" id="skobeloff" name="color" value="#D0ABA0" onChange={changeStyle}/>
+				<input type="radio" id="skobeloff" name="color" value="#392F5A" onChange={changeStyle}/>
 				<label id="skobeloff" htmlFor="skobeloff"/>
-				<input type="radio" id="viridian green" name="color" value="#E0C1B3" onChange={changeStyle}/>
+				<input type="radio" id="viridian green" name="color" value="#A3E7FC" onChange={changeStyle}/>
 				<label id="viridian_green" htmlFor="viridian green"/>
 			</form>
 			<button disabled={!title.length} className="createDeskButton">Создать доску</button>
