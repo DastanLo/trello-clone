@@ -37,7 +37,7 @@
     transition-duration: 0.2s;
 }
 .input{
-    background: #BCE784;
+    background: #519839;
     margin-bottom: 0;
     border-radius: 2px;
     display: flex;
@@ -71,31 +71,31 @@ input:focus{
     outline: none;
 }
 #red{
-    background: #BCE784;
+    background: #519839;
 }
 #yellow{
-    background: #5DD39E;
+    background: #0079BF;
 }
 #blue{
-    background: #348AA7;
+    background: #B04632;
 }
 #green{
-    background: #525174;
+    background: #D29034;
 }
 #caput_mortuum{
-    background: #513B56;
+    background: #F4D06F;
 }
 #wheat{
-    background: #BA7BA1;
+    background: #FFF8F0;
 }
 #orange_soda{
-    background: #C28CAE;
+    background: #9DD9D2;
 }
 #skobeloff{
-    background: #D0ABA0;
+    background: #392F5A;
 }
 #viridian_green{
-    background: #E0C1B3;
+    background: #A3E7FC;
 }
 .overlay{
     border-radius: 2px;

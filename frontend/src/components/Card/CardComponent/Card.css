@@ -17,6 +17,11 @@ h1{
     align-items: center;
 }
 .deleteCard{
+    border-radius: 2px;
+    padding: 0 3px 0;
     cursor: pointer;
     margin-right: 10px;
+}
+.deleteCard:hover{
+    background: lightgray;
 }
