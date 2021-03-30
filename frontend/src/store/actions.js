@@ -16,16 +16,16 @@ export const resetError = () => ({type: ac.RESET_ERROR});
 //------------------------------------------------------------------------//
 
 export const getBoardStart = () => ({type: ac.GET_BOARD_START});
-export const getBoardSuccess = user => ({type: ac.GET_BOARD_SUCCESS});
-export const getBoardError = (e) => ({type: ac.GET_BOARD_ERROR});
+export const getBoardSuccess = boards => ({type: ac.GET_BOARD_SUCCESS, payload: boards});
+export const getBoardError = (e) => ({type: ac.GET_BOARD_ERROR, payload: e});
 
 export const createBoardStart = () => ({type: ac.CREATE_BOARD_START});
-export const createBoardSuccess = user => ({type: ac.CREATE_BOARD_SUCCESS});
-export const createBoardError = (e) => ({type: ac.CREATE_BOARD_ERROR});
+export const createBoardSuccess = board => ({type: ac.CREATE_BOARD_SUCCESS, payload: board});
+export const createBoardError = (e) => ({type: ac.CREATE_BOARD_ERROR, payload: e});
 
 export const removeBoardStart = () => ({type: ac.REMOVE_BOARD_START});
-export const removeBoardSuccess = user => ({type: ac.REMOVE_BOARD_SUCCESS});
-export const removeBoardError = (e) => ({type: ac.REMOVE_BOARD_ERROR});
+export const removeBoardSuccess = () => ({type: ac.REMOVE_BOARD_SUCCESS});
+export const removeBoardError = (e) => ({type: ac.REMOVE_BOARD_ERROR, payload: e});
 
 export const createBoardSync = () => ({type: ac.CREATE_BOARD_SYNC});
 export const removeBoardSync = () => ({type: ac.REMOVE_BOARD_SYNC});

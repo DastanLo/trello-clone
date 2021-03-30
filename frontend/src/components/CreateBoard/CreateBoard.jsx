@@ -1,11 +1,11 @@
 import React from 'react';
 import './CreateBoard.css';
 
-const CreateBoard = ({text, click}) => {
+const CreateBoard = ({click}) => {
     return (
         <div>
             <div className="create-body" onClick={click}>
-                <span className="create-button">{text}Create new board</span>
+                <span className="create-button">Create new board</span>
             </div>
         </div>
     );

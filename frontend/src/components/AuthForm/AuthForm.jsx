@@ -5,14 +5,16 @@ import {loginUser, registerUser} from '../../store/asyncActions/userActions';
 import Alert from '../AlertWarning/Alert';
 import {useHistory} from 'react-router';
 import {resetError} from '../../store/actions';
+import Spinner from '../UI/Spinner/Spinner';
 
 const AuthForm = () => {
   const [form, setForm] = useState({
     username: '',
     password: '',
   });
-  const dispatch = useDispatch();
   const error = useSelector(state => state.user.error);
+  const loading = useSelector(state => state.user.loading);
+  const dispatch = useDispatch();
   const history = useHistory();
   const inputChangeHandler = (e) => {
     if (error) {
@@ -37,6 +39,7 @@ const AuthForm = () => {
   };
   return (
     <div className="form">
+      {loading ? <Spinner/> : null}
       <div className="form__logo">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Trello-logo-blue.svg/885px-Trello-logo-blue.svg.png"

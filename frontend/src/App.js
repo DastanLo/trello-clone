@@ -3,14 +3,17 @@ import {Switch, Route, Redirect} from 'react-router-dom';
 import BoardsPage from './container/BoardsPage';
 import AuthForm from './components/AuthForm/AuthForm';
 import {useSelector} from 'react-redux';
+import Layout from './components/Layout/Layout';
 
 const App = () => {
   const user = useSelector(state => state.user.user?.username);
   if (user) {
     return (
-      <Switch>
-        <Route exact path="/" component={BoardsPage}/>
-      </Switch>
+      <Layout>
+        <Switch>
+          <Route exact path="/" component={BoardsPage}/>
+        </Switch>
+      </Layout>
     );
   }
   return (

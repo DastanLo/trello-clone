@@ -3,7 +3,7 @@ import './BoardForm.css';
 import {useState} from "react";
 
 
-const BoardForm = () => {
+const BoardForm = ({close}) => {
 	const [title, setTitle] = useState('');
 	const [formColor, setFormColor] = useState('');
 	const changeStyle = (e) => {
@@ -16,14 +16,14 @@ const BoardForm = () => {
 		setTitle(titleValue);
 	}
 
-	const createDesk = () => {
+	const addBoard = () => {
 
 	}
 	return (
 		<div className="form">
 			<div style={{background: formColor}} className="input">
 				<input value={title} onChange={inputChangeHandler} formNoValidate type="text" placeholder="Добавьте заголовок доски"/>
-				<div className="closeButton">✕</div>
+				<div className="closeButton" onClick={close}>✕</div>
 			</div>
 			<form className="colors">
 				<input type="radio" id="red" name="color" value="#519839" onChange={changeStyle}/>
@@ -36,7 +36,7 @@ const BoardForm = () => {
 				<label id="green" htmlFor="green"/>
 				<input type="radio" id="caput mortuum" name="color" value="#F4D06F" onChange={changeStyle}/>
 				<label id="caput_mortuum" htmlFor="caput mortuum"/>
-				<input type="radio" id="wheat" name="color" value="#FFF8F0" onChange={changeStyle}/>
+				<input type="radio" id="wheat" name="color" value="#7E3F8F" onChange={changeStyle}/>
 				<label id="wheat" htmlFor="wheat"/>
 				<input type="radio" id="orange soda" name="color" value="#9DD9D2" onChange={changeStyle}/>
 				<label id="orange_soda" htmlFor="orange soda"/>
@@ -45,7 +45,7 @@ const BoardForm = () => {
 				<input type="radio" id="viridian green" name="color" value="#A3E7FC" onChange={changeStyle}/>
 				<label id="viridian_green" htmlFor="viridian green"/>
 			</form>
-			<button disabled={!title.length} className="createDeskButton">Создать доску</button>
+			<button onClick={addBoard} disabled={!title.length} className="createDeskButton">Создать доску</button>
 		</div>
 	);
 };

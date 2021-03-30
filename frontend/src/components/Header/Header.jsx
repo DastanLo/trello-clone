@@ -1,36 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Header.css";
 import "./HeaderButtons.css";
+import {NavLink} from 'react-router-dom';
 
 const Header = () => {
-  const [login, setLogin] = useState(false);
+  const logout = () => {
+
+  }
   return (
-    <header>
+    <header className="header">
       <div className="header__nav">
         <div className="header__logo">
-          <a href="#" className="logo__link"></a>
+          <NavLink to="/" className="logo__link"/>
         </div>
         <div className="header__buttons">
-          {login ? (
             <div className="logout__btn">
-              <a href="#" onClick={() => setLogin(!login)}>
                 <button>Выйти</button>
-              </a>
             </div>
-          ) : (
-            <>
-              <div className="signUp__btn">
-                <a href="#">
-                  <button>Зарегистрироваться</button>
-                </a>
-              </div>
-              <div className="login__btn">
-                <a href="#" onClick={() => setLogin(!login)}>
-                  <button>Войти</button>
-                </a>
-              </div>
-            </>
-          )}
         </div>
       </div>
     </header>

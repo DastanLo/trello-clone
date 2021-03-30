@@ -6,7 +6,7 @@ import Backdrop from "../Backdrop/Backdrop";
 const Spinner = memo((props) => {
   return (
     <>
-      <Backdrop show={props.show}/>
+      <Backdrop show={true}/>
       <div className="loader">Loading...</div>
     </>
   );
