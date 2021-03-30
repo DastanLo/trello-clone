@@ -1,9 +1,41 @@
 textarea{
-    margin: 10px 10px 0;
+    font-family: sans-serif;
     resize: vertical;
     width: 100%;
     min-height: 55px;
+    outline: none;
+
 }
 .textarea-box{
     width: 90%;
+    padding: 10px;
+}
+textarea::placeholder{
+    font-weight: 400;
+    font-family: sans-serif;
+}
+button{
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 2px;
+    padding: 5px;
+    color: #fff;
+    outline: none;
+    border: none;
+    background: #5acc44;
+}
+button:hover{
+    background: #6fd75c;
+}
+.close_button-textarea{
+    cursor: pointer;
+    margin-left: 10px;
+    color: #6b778c;
+}
+.textarea_buttons{
+    display: flex;
+    align-items: center;
+}
+.close_button-textarea:hover{
+    color: #000;
 }

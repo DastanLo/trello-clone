@@ -1,11 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Card.css'
 import Task from "../TaskComponent/Task";
 import AddTaskButton from "../AddButton/AddTaskButton.jsx";
 import Textarea from "../Textarea/Textarea";
 
 const Card = () => {
+	const [isClicked, setIsClicked] = useState(false);
 	const tasks = ['1dddskjdskajlkadjlakdjsalkdjsalkdandlskada', '2', '3', '4', '5']
+
+	const openTextarea = () => {
+		setIsClicked(true)
+	};
+	const closeTextarea = () => {
+		setIsClicked(false)
+	}
 	return (
 			<div className="card">
 				<div className="title">
@@ -17,8 +25,7 @@ const Card = () => {
 						return <Task text={task}/>
 					})
 				}
-				<AddTaskButton text="Добавить еще одну карточку"/>
-				<Textarea/>
+				{isClicked ? <Textarea click={closeTextarea}/> : <AddTaskButton click={openTextarea} text="Добавить еще одну карточку"/>}
 			</div>
 	);
 };
