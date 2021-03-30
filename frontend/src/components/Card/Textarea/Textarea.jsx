@@ -1,9 +1,10 @@
 import React from 'react';
+import './Textarea.css'
 
 const Textarea = () => {
 	return (
-		<div>
-			<textarea>
+		<div className="textarea-box">
+			<textarea autoFocus>
 
 			</textarea>
 		</div>

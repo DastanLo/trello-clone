@@ -1,0 +1,9 @@
+textarea{
+    margin: 10px 10px 0;
+    resize: vertical;
+    width: 100%;
+    min-height: 55px;
+}
+.textarea-box{
+    width: 90%;
+}
