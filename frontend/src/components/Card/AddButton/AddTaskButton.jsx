@@ -1,9 +1,9 @@
 import React from 'react';
 import './AddTaskButton.css'
 
-const AddTaskButton = ({text}) => {
+const AddTaskButton = ({text, click}) => {
 	return (
-		<div className="addTask">
+		<div onClick={click} className="addTask">
 			<span className="addText">{text}</span>
 		</div>
 	);
