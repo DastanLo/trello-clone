@@ -14,7 +14,6 @@ const BoardForm = () => {
 	const inputChangeHandler = (e) => {
 		const titleValue = e.target.value;
 		setTitle(titleValue);
-		console.log(title)
 	}
 
 	const createDesk = () => {
