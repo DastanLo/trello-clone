@@ -37,11 +37,11 @@ const BoardForm = () => {
 				<label id="green" htmlFor="green"/>
 				<input type="radio" id="caput mortuum" name="color" value="#F4D06F" onChange={changeStyle}/>
 				<label id="caput_mortuum" htmlFor="caput mortuum"/>
-				<input type="radio" id="wheat" name="color" value="#FFF8F0" onChange={changeStyle}/>
+				<input type="radio" id="wheat" name="color" value="#7E3F8F" onChange={changeStyle}/>
 				<label id="wheat" htmlFor="wheat"/>
-				<input type="radio" id="orange soda" name="color" value="#9DD9D2" onChange={changeStyle}/>
+				<input type="radio" id="orange soda" name="color" value="#392F5A" onChange={changeStyle}/>
 				<label id="orange_soda" htmlFor="orange soda"/>
-				<input type="radio" id="skobeloff" name="color" value="#392F5A" onChange={changeStyle}/>
+				<input type="radio" id="skobeloff" name="color" value="#9DD9D2" onChange={changeStyle}/>
 				<label id="skobeloff" htmlFor="skobeloff"/>
 				<input type="radio" id="viridian green" name="color" value="#A3E7FC" onChange={changeStyle}/>
 				<label id="viridian_green" htmlFor="viridian green"/>
