@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
 }
-.form {
+.form-auth {
     color: rgb(18, 4, 56);
     text-align: center;
     margin: 40px;

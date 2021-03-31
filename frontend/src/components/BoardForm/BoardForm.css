@@ -70,32 +70,32 @@ input:focus{
     display: none;
     outline: none;
 }
-#red{
+.color-1{
     background: #519839;
 }
-#yellow{
+.color-2{
     background: #0079BF;
 }
-#blue{
+.color-3{
     background: #B04632;
 }
-#green{
+.color-4{
     background: #D29034;
 }
-#caput_mortuum{
+.color-5{
     background: #F4D06F;
 }
-#wheat{
+.color-6{
     background: #7E3F8F;
 }
-#orange_soda{
+.color-7{
     background: #392F5A;
 }
-#skobeloff{
-    background: #9DD9D2;
+.color-8{
+    background: #1B1725;
 }
-#viridian_green{
-    background: #A3E7FC;
+.color-9{
+    background: #F9CB40;
 }
 .overlay{
     border-radius: 2px;
@@ -109,8 +109,8 @@ input[type="radio"]:not(:checked) + label:after {
     width: 10px;
     height: 5px;
     border-radius: 1px;
-    border-left: 4px solid #000;
-    border-bottom: 4px solid #000;
+    border-left: 4px solid #ebecf0;
+    border-bottom: 4px solid #ebecf0;
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
@@ -136,8 +136,15 @@ input[type="radio"]:checked + label:before{
     background: rgba(0,0,0,.5);
     z-index: 2;
 }
-label:hover, label:active, input:hover+label, input:active+label {
-    background: yellow;
+label {
+    position: relative;
+}
+label:hover:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
 }
 .input input:hover{
     border-radius: 2px;

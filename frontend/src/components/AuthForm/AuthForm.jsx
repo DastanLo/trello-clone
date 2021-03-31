@@ -38,7 +38,7 @@ const AuthForm = () => {
     dispatch(loginUser(form, history));
   };
   return (
-    <div className="form">
+    <div className="form-auth">
       {loading ? <Spinner/> : null}
       <div className="form__logo">
         <img

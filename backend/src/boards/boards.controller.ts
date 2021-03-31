@@ -20,7 +20,7 @@ export class BoardsController {
   }
 
   @Get()
-  getAll(@Query('id') id: string): Promise<any> {
+  getAll(@Query('user') id: string): Promise<any> {
     return this.boardsService.getAll(id);
   }
 

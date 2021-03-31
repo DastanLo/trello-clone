@@ -5,7 +5,7 @@ const CreateBoard = ({click}) => {
     return (
         <div>
             <div className="create-body" onClick={click}>
-                <span className="create-button">Create new board</span>
+                <span className="create-button">Создать новую доску</span>
             </div>
         </div>
     );
