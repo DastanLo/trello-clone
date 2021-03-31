@@ -58,6 +58,8 @@ const ac = {
 
     RESET_ERROR: 'RESET_ERROR',
 
+    ON_DRAG_END: 'ON_DRAG_END',
+
 }
 
 export default ac;

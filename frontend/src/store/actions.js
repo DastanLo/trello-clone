@@ -24,7 +24,6 @@ export const createBoardSuccess = board => ({type: ac.CREATE_BOARD_SUCCESS, payl
 export const createBoardError = (e) => ({type: ac.CREATE_BOARD_ERROR, payload: e});
 
 export const removeBoardStart = () => ({type: ac.REMOVE_BOARD_START});
-export const removeBoardSuccess = () => ({type: ac.REMOVE_BOARD_SUCCESS});
 export const removeBoardError = (e) => ({type: ac.REMOVE_BOARD_ERROR, payload: e});
 
 export const createBoardSync = () => ({type: ac.CREATE_BOARD_SYNC});
@@ -59,6 +58,8 @@ export const removeTaskError = (e) => ({type: ac.REMOVE_TASK_ERROR});
 
 export const createTaskSync = () => ({type: ac.CREATE_TASK_SYNC});
 export const removeTaskSync = () => ({type: ac.REMOVE_TASK_SYNC});
+
+export const dragEndBoard = (result) => ({type: ac.ON_DRAG_END, payload: result});
 
 
 

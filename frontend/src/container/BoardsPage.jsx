@@ -2,14 +2,18 @@ import React, {useEffect, useState} from 'react';
 import CreateBoard from "../components/CreateBoard/CreateBoard";
 import Modal from '../components/UI/Modal/Modal';
 import BoardForm from '../components/BoardForm/BoardForm';
-import {getBoards} from '../store/asyncActions/boardActions';
+import {deleteBoard, getBoards} from '../store/asyncActions/boardActions';
 import {useDispatch, useSelector} from 'react-redux';
 import Board from '../components/Board/Board';
+import Spinner from '../components/UI/Spinner/Spinner';
+import {DragDropContext, Draggable, Droppable} from 'react-beautiful-dnd';
+import {dragEndBoard} from '../store/actions';
 
 const BoardsPage = () => {
   const [open, setOpen] = useState(false);
   const user = useSelector(state => state.user.user);
   const boards = useSelector(state => state.board.boards);
+  const loading = useSelector(state => state.board.loading);
   const dispatch = useDispatch();
   const openModal = () => {
     setOpen(true);
@@ -17,23 +21,55 @@ const BoardsPage = () => {
   const closeModal = () => {
     setOpen(false);
   }
+  const getCards = () => {
+
+  }
+  const removeBoard = (id) => {
+    dispatch(deleteBoard(id, user._id))
+  }
+  const onDragEnd = (result) => {
+    if (!result.destination) {
+      return;
+    }
+    dispatch(dragEndBoard(result));
+  }
   useEffect(() => {
     dispatch(getBoards(user._id));
   }, [dispatch, user._id])
     return (
-        <div className="boards-container">
+      <DragDropContext onDragEnd={onDragEnd}>
+        <Droppable droppableId="boardDroppable" direction="horizontal">
           {
-            boards.map(board => {
-              return <Board title={board.title}
-                            background={board.background}
-                            click={() => {}}/>
-            })
+            (provided, snapshot) => (
+              <div className="boards-container"
+                   ref={provided.innerRef}
+                   {...provided.droppableProps}>
+                {loading ? <Spinner/> : null}
+                {
+                  boards.map((board, i) => (
+                    <Draggable key={board._id} draggableId={board._id} index={i}>
+                      {(provided, snapshot) => (
+                        <Board title={board.title}
+                               remove={() => removeBoard(board._id)}
+                               boardRef={provided.innerRef}
+                               background={board.background}
+                               dragHandleProps={provided.dragHandleProps}
+                               draggableProps={provided.draggableProps}
+                               click={getCards}/>
+                      )}
+                    </Draggable>
+                  ))
+                }
+                {provided.placeholder}
+                <CreateBoard click={openModal}/>
+                <Modal show={open} close={closeModal}>
+                  <BoardForm close={closeModal}/>
+                </Modal>
+              </div>
+            )
           }
-            <CreateBoard click={openModal}/>
-          <Modal show={open} close={closeModal}>
-            <BoardForm close={closeModal}/>
-          </Modal>
-        </div>
+        </Droppable>
+      </DragDropContext>
     );
 };
 
