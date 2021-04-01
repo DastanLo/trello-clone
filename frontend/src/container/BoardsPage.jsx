@@ -35,7 +35,7 @@ const BoardsPage = () => {
   }
   useEffect(() => {
     dispatch(getBoards(user._id));
-  }, [dispatch, user._id])
+  }, [dispatch, user._id]);
     return (
       <DragDropContext onDragEnd={onDragEnd}>
         <Droppable droppableId="boardDroppable" direction="horizontal">
