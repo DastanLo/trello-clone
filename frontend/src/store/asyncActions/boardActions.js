@@ -14,6 +14,7 @@ export const getBoards = (id) => async dispatch => {
   try {
     dispatch(getBoardStart());
     const response = await axiosInstance.get('/boards?user=' + id);
+    console.log(response.data[1]._id)
     dispatch(getBoardSuccess(response.data));
   } catch (e) {
     dispatch(getBoardError(e.response.data));
