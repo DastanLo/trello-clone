@@ -1,4 +1,5 @@
 export class UpdateCardDto {
-  readonly id: string;
+  readonly card: string;
   readonly text: string;
+  readonly id: string;
 }

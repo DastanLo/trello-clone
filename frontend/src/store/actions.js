@@ -36,25 +36,33 @@ export const getCardSuccess = cards => ({type: ac.GET_CARD_SUCCESS, payload: car
 export const getCardError = (e) => ({type: ac.GET_CARD_ERROR});
 
 export const createCardStart = () => ({type: ac.CREATE_CARD_START});
-export const createCardSuccess = user => ({type: ac.CREATE_CARD_SUCCESS});
-export const createCardError = (e) => ({type: ac.CREATE_CARD_ERROR});
+export const createCardSuccess = card => ({type: ac.CREATE_CARD_SUCCESS, payload: card});
+export const createCardError = (e) => ({type: ac.CREATE_CARD_ERROR, payload: e});
 
 export const removeCardStart = () => ({type: ac.REMOVE_CARD_START});
 export const removeCardSuccess = user => ({type: ac.REMOVE_CARD_SUCCESS});
-export const removeCardError = (e) => ({type: ac.REMOVE_CARD_ERROR});
+export const removeCardError = (e) => ({type: ac.REMOVE_CARD_ERROR, payload: e});
 
 export const createCardSync = () => ({type: ac.CREATE_CARD_SYNC});
 export const removeCardSync = () => ({type: ac.REMOVE_CARD_SYNC});
 
 //------------------------------------------------------------------------//
 
+export const onDragEndCard = (droppableIdStart, droppableIdEnd, droppableIndexStart, droppableIndexEnd, draggableId, type) => ({type: ac.ON_DRAG_END_CARD, payload: {
+    droppableIdStart,
+    droppableIdEnd,
+    droppableIndexEnd,
+    droppableIndexStart,
+    draggableId,
+    type
+  }});
 export const createTaskStart = () => ({type: ac.CREATE_TASK_START});
-export const createTaskSuccess = user => ({type: ac.CREATE_TASK_SUCCESS});
-export const createTaskError = (e) => ({type: ac.CREATE_TASK_ERROR});
+export const createTaskSuccess = task => ({type: ac.CREATE_TASK_SUCCESS, payload: task});
+export const createTaskError = (e) => ({type: ac.CREATE_TASK_ERROR, payload: e});
 
 export const removeTaskStart = () => ({type: ac.REMOVE_TASK_START});
 export const removeTaskSuccess = user => ({type: ac.REMOVE_TASK_SUCCESS});
-export const removeTaskError = (e) => ({type: ac.REMOVE_TASK_ERROR});
+export const removeTaskError = (e) => ({type: ac.REMOVE_TASK_ERROR, payload: e});
 
 export const createTaskSync = () => ({type: ac.CREATE_TASK_SYNC});
 export const removeTaskSync = () => ({type: ac.REMOVE_TASK_SYNC});

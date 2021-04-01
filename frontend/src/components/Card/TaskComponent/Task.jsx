@@ -1,13 +1,14 @@
 import React from 'react';
 import './Task.css'
 
-const Task = ({text}) => {
+const Task = ({text, remove, draggableProps, dragHandleProps, dragref}) => {
 	return (
-		<div className="task">
+		<div className="task" ref={dragref} {...dragHandleProps} {...draggableProps}>
 			<span className="taskText">
 				{text}
 			</span>
-			<div className="trashBin" style={{backgroundImage: `url(${process.env.PUBLIC_URL}/trashBin.png)`}}/>
+			<div className="trashBin" onClick={remove}
+					 style={{backgroundImage: `url(${process.env.PUBLIC_URL}/trashBin.png)`}}/>
 		</div>
 
 	);

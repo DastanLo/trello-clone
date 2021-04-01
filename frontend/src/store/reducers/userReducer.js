@@ -22,6 +22,8 @@ const userReducer = (state = initialState, action) => {
       return {...state, loading: false, error: action.payload};
     case ac.RESET_ERROR:
       return {...state, error: null, loading: false};
+    case ac.LOG_OUT:
+      return {...state, user: null}
     default:
       return state;
   }

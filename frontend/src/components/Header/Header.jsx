@@ -2,10 +2,13 @@ import React from "react";
 import "./Header.css";
 import "./HeaderButtons.css";
 import {NavLink} from 'react-router-dom';
+import {logout} from '../../store/actions';
+import {useDispatch} from 'react-redux';
 
 const Header = () => {
-  const logout = () => {
-
+  const dispatch = useDispatch();
+  const logoutUser = () => {
+    dispatch(logout())
   }
   return (
     <header className="header">
@@ -15,7 +18,7 @@ const Header = () => {
         </div>
         <div className="header__buttons">
             <div className="logout__btn">
-                <button>Выйти</button>
+                <button onClick={logoutUser}>Выйти</button>
             </div>
         </div>
       </div>

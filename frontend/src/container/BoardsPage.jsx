@@ -8,7 +8,7 @@ import Board from '../components/Board/Board';
 import Spinner from '../components/UI/Spinner/Spinner';
 import {DragDropContext, Draggable, Droppable} from 'react-beautiful-dnd';
 import {dragEndBoard} from '../store/actions';
-import {useHistory} from "react-router";
+import {useHistory} from "react-router-dom";
 
 const BoardsPage = () => {
   const [open, setOpen] = useState(false);
@@ -26,7 +26,8 @@ const BoardsPage = () => {
   const goToCardsPage = (id) => {
     history.push('/board/' + id)
   }
-  const removeBoard = (id) => {
+  const removeBoard = (id, e) => {
+    e.stopPropagation();
     dispatch(deleteBoard(id, user._id))
   }
   const onDragEnd = (result) => {
@@ -52,12 +53,12 @@ const BoardsPage = () => {
                     <Draggable key={board._id} draggableId={board._id} index={i}>
                       {(provided, snapshot) => (
                         <Board title={board.title}
-                               remove={() => removeBoard(board._id)}
+                               remove={(e) => removeBoard(board._id, e)}
                                boardRef={provided.innerRef}
                                background={board.background}
                                dragHandleProps={provided.dragHandleProps}
                                draggableProps={provided.draggableProps}
-                               click={goToCardsPage(board._id)}/>
+                               click={() => goToCardsPage(board._id)}/>
                       )}
                     </Draggable>
                   ))

@@ -9,7 +9,7 @@ import cardReducer from './reducers/cardReducer';
 
 const rootReducer = combineReducers({
   user: userReducer,
-  cards: cardReducer,
+  card: cardReducer,
   board: boardReducer,
 });
 

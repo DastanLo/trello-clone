@@ -14,10 +14,9 @@ export const getBoards = (id) => async dispatch => {
   try {
     dispatch(getBoardStart());
     const response = await axiosInstance.get('/boards?user=' + id);
-    console.log(response.data[1]._id)
     dispatch(getBoardSuccess(response.data));
   } catch (e) {
-    dispatch(getBoardError(e.response.data));
+    dispatch(getBoardError(e));
   }
 }
 
@@ -27,7 +26,7 @@ export const createBoard = (board) => async dispatch => {
     const response = await axiosInstance.post('/boards', board);
     dispatch(createBoardSuccess(response.data));
   } catch (e) {
-    dispatch(createBoardError(e.response.data));
+    dispatch(createBoardError(e));
   }
 }
 
@@ -37,6 +36,7 @@ export const deleteBoard = (id, userId) => async dispatch => {
     await axiosInstance.delete('/boards/' + id);
     dispatch(getBoards(userId));
   } catch (e) {
-    dispatch(removeBoardError(e.response.data));
+    console.log(e);
+    dispatch(removeBoardError(e));
   }
 }
