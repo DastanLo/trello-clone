@@ -4,6 +4,7 @@ import BoardsPage from './container/BoardsPage';
 import AuthForm from './components/AuthForm/AuthForm';
 import {useSelector} from 'react-redux';
 import Layout from './components/Layout/Layout';
+import CardsPage from "./container/CardsPage";
 
 const App = () => {
   const user = useSelector(state => state.user.user?.username);
@@ -12,6 +13,7 @@ const App = () => {
       <Layout>
         <Switch>
           <Route exact path="/" component={BoardsPage}/>
+          <Route exact path="/board/:id" component={CardsPage}/>
         </Switch>
       </Layout>
     );

@@ -4,10 +4,12 @@ import userReducer, {initialState} from './reducers/userReducer';
 import {composeWithDevTools} from 'redux-devtools-extension';
 import {loadFromLocalStorage, localStorageMiddleware} from '../config/localStorage';
 import boardReducer from './reducers/boardReducer';
+import cardReducer from './reducers/cardReducer';
 
 
 const rootReducer = combineReducers({
   user: userReducer,
+  cards: cardReducer,
   board: boardReducer,
 });
 

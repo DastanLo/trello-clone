@@ -1,15 +1,15 @@
 import React from 'react';
 import './Textarea.css'
 
-const Textarea = ({click}) => {
+const Textarea = ({close, click}) => {
 	return (
 		<div className="textarea-box">
 			<textarea placeholder="Ввести заголовок для этой карточки" autoFocus/>
 			<div className="textarea_buttons">
-				<button>
+				<button onClick={click}>
 					Добавить карточку
 				</button>
-				<div onClick={click} className="close_button-textarea">✕</div>
+				<div onClick={close} className="close_button-textarea">✕</div>
 			</div>
 		</div>
 	);

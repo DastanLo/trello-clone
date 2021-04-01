@@ -8,6 +8,7 @@ import Board from '../components/Board/Board';
 import Spinner from '../components/UI/Spinner/Spinner';
 import {DragDropContext, Draggable, Droppable} from 'react-beautiful-dnd';
 import {dragEndBoard} from '../store/actions';
+import {useHistory} from "react-router";
 
 const BoardsPage = () => {
   const [open, setOpen] = useState(false);
@@ -15,14 +16,15 @@ const BoardsPage = () => {
   const boards = useSelector(state => state.board.boards);
   const loading = useSelector(state => state.board.loading);
   const dispatch = useDispatch();
+  const history = useHistory();
   const openModal = () => {
     setOpen(true);
   }
   const closeModal = () => {
     setOpen(false);
   }
-  const getCards = () => {
-
+  const goToCardsPage = (id) => {
+    history.push('/board/' + id)
   }
   const removeBoard = (id) => {
     dispatch(deleteBoard(id, user._id))
@@ -55,7 +57,7 @@ const BoardsPage = () => {
                                background={board.background}
                                dragHandleProps={provided.dragHandleProps}
                                draggableProps={provided.draggableProps}
-                               click={getCards}/>
+                               click={goToCardsPage(board._id)}/>
                       )}
                     </Draggable>
                   ))

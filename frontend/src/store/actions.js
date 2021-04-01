@@ -32,7 +32,7 @@ export const removeBoardSync = () => ({type: ac.REMOVE_BOARD_SYNC});
 //------------------------------------------------------------------------//
 
 export const getCardStart = () => ({type: ac.GET_CARD_START});
-export const getCardSuccess = user => ({type: ac.GET_CARD_SUCCESS});
+export const getCardSuccess = cards => ({type: ac.GET_CARD_SUCCESS, payload: cards});
 export const getCardError = (e) => ({type: ac.GET_CARD_ERROR});
 
 export const createCardStart = () => ({type: ac.CREATE_CARD_START});
